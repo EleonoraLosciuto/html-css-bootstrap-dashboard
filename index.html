@@ -259,25 +259,34 @@
                     </tbody>
                 </table>
             </div>
-            <div class="container-aside ms-5">
-                <div class="list-task mb-4">
-                    <h3>
+            <div class="container-aside ms-lg-5">
+                <div class="card mb-4">
+                    <h3 class="card-header">
                         Todo
                     </h3>
-                    <ul>
-                        <li>Chiamare segreteria</li>
-                        <li>Mandare avvisi prestiti scaduti</li>
-                         <li>Ordinare nuovi libri</li>
+                    <ul class="list-group">
+                        <li class="list-group-item">
+                            <input class="form-check-input" type="checkbox" id="chiamare-segreteria">
+                            <label for="chiamare-segreteria" class="form-check-label">Chiamare segreteria</label>
+                        </li>
+                        <li class="list-group-item">
+                            <input class="form-check-input" type="checkbox" id="mandare-avvisi-prestiti-scaduti">
+                            <label for="mandare-avvisi-prestiti-scaduti" class="form-check-label">Mandare avvisi prestiti scaduti</label>
+                        </li>
+                        <li class="list-group-item">
+                            <input class="form-check-input" type="checkbox" id="ordinare-nuovi-libri">
+                            <label for="ordinare-nuovi-libri" class="form-check-label">Ordinare nuovi libri</label>
+                        </li>
                     </ul>
                 </div>
-                <div class="faq">
-                        <h3>
+                <div class="card">
+                        <h3 class="card-header">
                             FAQ
                         </h3>
-                        <ul>
-                            <li>Come aggiungere un nuovo libro</li>
-                            <li>Come posso accedere all'anagrafica utenti</li>
-                            <li>Posso usare questa dashboard da mobile</li>
+                        <ul class="dropdown px-4">
+                            <li class="dropdown-item border-bottom py-2"> <button class="btn dropdown-toggle" href="#" type="button">Come aggiungere un nuovo libro</button></li>
+                            <li class="dropdown-item border-0 border-bottom py-2"><button class="btn dropdown-toggle" href="#" type="button">Come posso accedere all'anagrafica utenti</button></li>
+                            <li class="dropdown-item border-0 py-2"><button class="btn dropdown-toggle" href="#" type="button">Posso usare questa dashboard da mobile</button></li>
                         </ul>
                 </div>
             </div>

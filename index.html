@@ -17,7 +17,7 @@
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
                 </button>
-                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <div class="collapse navbar-collapse position-relative" id="navbarSupportedContent">
                         <ul class="navbar-nav ms-auto text-end ms-lg-0 mb-1">
                             <li class="nav-item">
                                 <a href="#" class="nav-link active" aria-current="page">Catalogo Libri</a>
@@ -33,10 +33,148 @@
                             </li>
                         </ul>
                 </div>
+                <form class="me-lg-0 position-absolute end-0 d-none d-lg-flex me-lg-3" role="search">
+                    <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search"/>
+                    <button class="btn btn-outline-success" type="submit">Search</button>
+                </form>
             </div>
         </nav>
-        <div class="container px-5 my-4">
-            <h2>Catalogo Libri</h2>
+        <div class="container-md px-5 my-4">
+            <div class="container position-relative">
+                <h2 class="d-inline">Catalogo Libri</h2>
+                <button type="button" class="btn btn-primary d-inline-block position-absolute end-0">Aggiungi Libro</button>
+                <table class="table table-striped align-middle">
+                    <thead>
+                        <th>Titolo</th>
+                        <th>Data prestito</th>
+                        <th>Stato</th>
+                        <th>Azioni</th>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>I pilastri della terra</td>
+                            <td>
+                                <p>-</p>
+                            </td>
+                            <td>
+                                <p class="text-white small fw-semibold bg-success d-inline p-1 rounded-3">Disponibile</p>
+                            </td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td>I promessi sposi</td>
+                            <td>
+                                <p>-</p>
+                            </td>
+                            <td>
+                                <p class="text-white small fw-semibold bg-success d-inline p-1 rounded-3">Disponibile</p>
+                            </td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td>Il signore degli anelli</td>
+                            <td>
+                                <p>18/10/2023</p>
+                            </td>
+                            <td>
+                                <p class="text-white small fw-semibold bg-warning d-inline p-1 rounded-3">In prestito</p>
+                            </td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td>Harry Potter e la pietra filosofale</td>
+                            <td>
+                                <p>-</p>
+                            </td>
+                            <td>
+                                <p class="text-white small fw-semibold bg-success d-inline p-1 rounded-3">Disponibile</p>
+                            </td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td>Il codice Da Vinci</td>
+                            <td>
+                                <p>-</p>
+                            </td>
+                            <td>
+                                <p class="text-white small fw-semibold bg-danger d-inline p-1 rounded-3">Non disponibile</p>
+                            </td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td>Shining</td>
+                            <td>
+                                <p>-</p>
+                            </td>
+                            <td>
+                                <p class="text-white small fw-semibold bg-success d-inline p-1 rounded-3">Disponibile</p>
+                            </td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td>La divina commedia</td>
+                            <td>
+                                <p>21/09/2023</p>
+                            </td>
+                            <td>
+                                <p class="text-white small fw-semibold bg-warning d-inline p-1 rounded-3">In prestito</p>
+                            </td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td>Il trono di spade</td>
+                            <td>
+                                <p>-</p>
+                            </td>
+                            <td>
+                                <p class="text-white small fw-semibold bg-success d-inline p-1 rounded-3">Disponibile</p>
+                            </td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td>Il mondo di Sofia</td>
+                            <td>
+                                <p>-</p>
+                            </td>
+                            <td>
+                                <p class="text-white small fw-semibold bg-danger d-inline p-1 rounded-3">Non disponibile</p>
+                            </td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td>Le cronache di Narnia: il leone, la strega e l'armadio</td>
+                            <td>
+                                <p>25/07/2023</p>
+                            </td>
+                            <td>
+                                <p class="text-white small fw-semibold bg-warning d-inline p-1 rounded-3">In prestito</p>
+                            </td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td>Il piccolo principe</td>
+                            <td>
+                                <p>-</p>
+                            </td>
+                            <td>
+                                <p class="text-white small fw-semibold bg-success d-inline p-1 rounded-3">Disponibile</p>
+                            </td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td>La storia infinita</td>
+                            <td>
+                                <p>-</p>
+                            </td>
+                            <td>
+                                <p class="text-white small fw-semibold bg-success d-inline p-1 rounded-3">Disponibile</p>
+                            </td>
+                            <td></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
         </div>
          
 </body>

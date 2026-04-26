@@ -10,15 +10,18 @@
 </head>
 
 <body>
+    <!-- navbar that expands when breakpoints is large - I use standard Bootstrap style with navbar dark -->
         <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
             <div class="container-fluid">
                 <a class="navbar-brand" href="#">
                     <img src="./img/duck.png" alt="duck-logo" width="50px">
                 </a>
+
+                <!-- navbar toggler icon ("hamburger menu") with standard Bootstrap rules including "navbarSupportedContent" for all navbar items to be collapsed -->
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
                 </button>
-                <div class="collapse navbar-collapse position-relative" id="navbarSupportedContent">
+                <div class="collapse navbar-collapse position-relative" id="navbarSupportedContent"> <!-- position relative in order to position search form for large screen -->
                         <ul class="navbar-nav ms-auto text-end ms-lg-0 mb-1">
                             <li class="nav-item">
                                 <a href="#" class="nav-link active" aria-current="page">Catalogo Libri</a>
@@ -34,17 +37,24 @@
                             </li>
                         </ul>
                 </div>
+                 <!-- search form has display none for mobile and tablet / for large screen breakpoint: display flex + position absolute with margin right 3 - display flex is needed to have input form and button "inline" -->
                 <form class="me-lg-0 position-absolute end-0 d-none d-lg-flex me-lg-3" role="search">
-                    <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search"/>
-                    <button class="btn btn-outline-success" type="submit">Search</button>
+                    <input class="form-control me-2" type="search" placeholder="Cerca..." aria-label="Search"/>
+                    <button class="btn btn-outline-success" type="submit">Cerca</button>
                 </form>
             </div>
         </nav>
+        
+        <!-- I create a container (fluid - 100% of width) and give it display flex for large screen breakpoint - this is to display the "aside" (Todo and FAQ cards) next to the table for large screens -->
         <div class="container-fluid px-3 my-4 d-lg-flex">
+            
+            <!-- table container - useful for positioning for large screen layout (it is flex child for large breakpoints) + it is also parent with {position: relative;} for positioning the "Aggiungi Libro" button on the right -->
             <div class="table-container position-relative">
                 <h2 class="d-inline">Catalogo Libri</h2>
-                <button type="button" class="btn btn-primary d-inline-block position-absolute end-0">Aggiungi Libro</button>
-                <table class="table table-striped align-middle">
+                <button type="button" class="btn btn-primary d-inline-block position-absolute end-0">Aggiungi Libro</button> <!-- button with {position: absolute;}, relative to .table-container parent -->
+                
+                <!-- TABLE -->
+                <table class="table table-striped align-middle"> 
                     <thead>
                         <th>Titolo</th>
                         <th class="d-none d-md-table-cell">Data prestito</th>
@@ -259,7 +269,11 @@
                     </tbody>
                 </table>
             </div>
-            <div class="container-aside ms-lg-5">
+
+            <!-- aside container is direct child of the container-fluid with display-flex, allowing for positioning next to the table for large screen breakpoint -->
+            <div class="aside-container ms-lg-5">
+
+               <!-- Todo card -->
                 <div class="card mb-4">
                     <h3 class="card-header">
                         Todo
@@ -279,10 +293,13 @@
                         </li>
                     </ul>
                 </div>
+
+                <!-- FAQ card -->
                 <div class="card">
                         <h3 class="card-header">
                             FAQ
                         </h3>
+                        <!-- for dropdown I used Bootstrap dropdown classes and standards -->
                         <ul class="dropdown px-4">
                             <li class="dropdown-item border-bottom py-2"> <button class="btn dropdown-toggle" href="#" type="button">Come aggiungere un nuovo libro</button></li>
                             <li class="dropdown-item border-0 border-bottom py-2"><button class="btn dropdown-toggle" href="#" type="button">Come posso accedere all'anagrafica utenti</button></li>

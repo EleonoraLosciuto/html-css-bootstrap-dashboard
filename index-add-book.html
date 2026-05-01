@@ -1,4 +1,4 @@
-<html lang="en">
+<html lang="it">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,6 +7,9 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
     <script defer src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
+    
+    <!-- title and icon -->
+    <link rel="shortcut icon" href="./img/duck.png" type="image/x-icon">
     <title>Aggiugi Libro</title>
 </head>
 
@@ -29,7 +32,7 @@
             <div class="collapse navbar-collapse text-end text-lg-start" id="navbarNav">
                 <ul class="navbar-nav">
                     <li class="nav-item">
-                        <a href="#" class="nav-link">Catalogo Libri</a>
+                        <a href="./index.html" class="nav-link">Catalogo Libri</a>
                     </li>
                     <li class="nav-item">
                         <a href="#" class="nav-link">Anagrafica Utenti</a>
@@ -44,6 +47,78 @@
             </div> <!-- close .collapse.navbar-collapse -->
         </div> <!-- close .container-fluid -->
     </nav> <!-- close nav -->
+
+    <!-- main as container for form and title -->
+    <main class="container-lg my-4">
+        
+        <h2>Nuovo Libro</h2>
+
+        <form method="GET">
+
+            <div class="row mt-3">
+                <div class="col-6">
+                    <label for="authorGivenName" class="form-label fs-6 fw-medium">Nome Autore</label>
+                    <input type="text" class="form-control" id="authorGivenName" name="author-name" placeholder="Inserisci il nome dell'autore">
+                </div>
+                <div class="col-6">
+                    <label for="authorFamilyName" class="form-label fs-6 fw-medium">Cognome Autore</label>
+                    <input type="text" class="form-control" id="authorFamilyName" name="author-family-name" placeholder="Inserisci il cognome dell'autore">
+                </div>
+            </div>
+        
+            <div class="row mt-3">
+                <div class="col-12">
+                    <label for="BookTitle" class="form-label fs-6 fw-medium">Titolo</label>
+                    <input type="text" class="form-control" id="BookTitle" name="book-title" placeholder="Inserisci il titolo del libro" aria-describedby="titleHelp">
+                    <div class="form-text" id="titleHelp">Titolo versione italiana</div>
+                </div>
+            </div>
+
+            <div class="row row-cols-1 row-cols-lg-3 mt-3">
+                <div class="col">
+                    <label for="bookGenre" class="form-label fs-6 fw-medium">Genere</label>
+                    <select class="form-select" id="bookGenre">
+                        <option value="" disabled selected>Scegli il Genere</option>
+                        <option value="fantasy">Fantasy</option>
+                        <option value="action">Action & Thriller</option>
+                        <option value="horror">Horror</option>
+                        <option value="romance">Romance</option>
+                        <option value="graphic-novel">Graphic Novel</option>
+                        <option value="nonfiction">Nonfiction & Biographies</option>
+                    </select>
+                </div>
+                <div class="col">
+                    <label for="bookYear" class="form-label fs-6 fw-medium mt-2">Anno di Pubblicazione</label>
+                    <input type="number" class="form-control" id="bookYear" name="book-year" placeholder="Inserisci l'anno">
+                </div>
+                <div class="col">
+                    <label for="isbnCode" class="form-label fs-6 fw-medium mt-2">ISBN#</label>
+                    <input type="text" class="form-control" id="isbnCode" name="isbn" placeholder="Inserisci codice ISBN#">
+                </div>                
+            </div>
+
+            <hr class="my-4">
+
+            <div class="row">
+                <div class="col">
+                    <label for="noteBook" class="form-label fw-medium fs-6">Note</label>
+                    <textarea class="form-control" id="noteBook" rows="3" placeholder="Inserisci eventuali note sul libro"></textarea>
+                </div>
+            </div>
+
+            <div class="my-2">
+                <div class="col">
+                    <input type="checkbox" class="form-check-input" name="digital" id="digitalCheck">
+                    <label for="digitalCheck" class="form-check-label fw-medium">Disponibile anche in digitale</label>
+                </div>
+            </div>
+            <!-- Button to Submit -->
+            <div class="col-12 my-4">
+                <button type="submit" class="btn btn-primary">Aggiungi Libro</button>
+            </div>
+        </form>
+
+    </main>
 
 </body>
 </html>
